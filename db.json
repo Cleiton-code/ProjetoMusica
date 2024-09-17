@@ -1,19 +1,76 @@
 {
-  "posts": [
+  "musics": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": 8,
+      "name": "Devolva-me",
+      "price": 7.29,
+      "category": "Sertanejo",
+      "artist": "Chico Rey & Paaraná",
+      "year": 1989
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 9,
+      "name": "Chora Me Liga",
+      "price": 8.99,
+      "category": "Sertanejo",
+      "artist": "João Bosco & Vinícius",
+      "year": 2009
+    },
+    {
+      "id": 10,
+      "name": "Evidências",
+      "price": 9.49,
+      "category": "Sertanejo",
+      "artist": "Chitãozinho & Xororó",
+      "year": 1990
+    },
+    {
+      "id": 11,
+      "name": "O Mundo é dos Jovens",
+      "price": 7.79,
+      "category": "Sertanejo",
+      "artist": "Zezé Di Camargo & Luciano",
+      "year": 1995
+    },
+    {
+      "id": 12,
+      "name": "Não Aprendi Dizer Adeus",
+      "price": 8.29,
+      "category": "Sertanejo",
+      "artist": "Leandro & Leonardo",
+      "year": 1992
+    },
+    {
+      "id": 13,
+      "name": "Fio de Cabelo",
+      "price": 7.99,
+      "category": "Sertanejo",
+      "artist": "Chitãozinho & Xororó",
+      "year": 1989
+    },
+    {
+      "id": 14,
+      "name": "Tô Te Amando",
+      "price": 8.69,
+      "category": "Sertanejo",
+      "artist": "João Paulo & Daniel",
+      "year": 1993
+    },
+    {
+      "id": 15,
+      "name": "Coração Não Tem Idade",
+      "price": 7.49,
+      "category": "Sertanejo",
+      "artist": "Milionário & José Rico",
+      "year": 1981
+    },
+    {
+      "id": 16,
+      "name": "Parece que foi Ontem",
+      "price": 7.89,
+      "category": "Sertanejo",
+      "artist": "Tião Carreiro & Pardinho",
+      "year": 1984
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
