@@ -1,14 +1,6 @@
 {
   "musics": [
     {
-      "id": 8,
-      "name": "Devolva-me",
-      "price": 7.29,
-      "category": "Sertanejo",
-      "artist": "Chico Rey & Paaraná",
-      "year": 1989
-    },
-    {
       "id": 9,
       "name": "Chora Me Liga",
       "price": 8.99,
@@ -23,14 +15,6 @@
       "category": "Sertanejo",
       "artist": "Chitãozinho & Xororó",
       "year": 1990
-    },
-    {
-      "id": 11,
-      "name": "O Mundo é dos Jovens",
-      "price": 7.79,
-      "category": "Sertanejo",
-      "artist": "Zezé Di Camargo & Luciano",
-      "year": 1995
     },
     {
       "id": 12,

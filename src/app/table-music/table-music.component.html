@@ -14,7 +14,7 @@
     <tbody>
       <tr *ngFor="let music of musics">
         <th scope="row">{{music.id}}</th>
-        <td>{{music.name}}</td>
+        <td><a [routerLink]="['/music', music.id]">{{music.name}}</a></td>
         <td>{{music.price}}</td>
         <td>{{music.artist}}</td>
         <td>{{music.category}}</td>
