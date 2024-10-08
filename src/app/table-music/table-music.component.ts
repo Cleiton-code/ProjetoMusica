@@ -1,5 +1,6 @@
+import { Router } from '@angular/router';
 import { MusicsService } from './../musics.service';
-import { music } from '../musics';
+import { Music } from '../musics';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,16 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './table-music.component.css'
 })
 export class TableMusicComponent implements OnInit {
-  musics: music[] = [];
+  musics: Music[] = [];
 
 
-  constructor(private MusicsService: MusicsService){}
+  constructor(private MusicsService: MusicsService,
+              private router: Router
+  ){}
 
   ngOnInit(): void {
     this.loadMusics();
   }
 
-  delete (music: music) {
+  delete (music: Music) {
     this.MusicsService.delete(music).subscribe({
       next: () => this.loadMusics()
     });
@@ -29,6 +32,10 @@ loadMusics() {
   this.MusicsService.getMusics().subscribe(data => {
     this.musics = data;
   });
+}
+
+create() {
+  this.router.navigate(['music'])
 }
 
 }

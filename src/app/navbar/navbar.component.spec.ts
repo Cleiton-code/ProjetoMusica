@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableMusicComponent } from './table-music.component';
+import { NavbarComponent } from './navbar.component';
 
-describe('TableMusicComponent', () => {
-  let component: TableMusicComponent;
-  let fixture: ComponentFixture<TableMusicComponent>;
+describe('NavbarComponent', () => {
+  let component: NavbarComponent;
+  let fixture: ComponentFixture<NavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TableMusicComponent]
+      declarations: [NavbarComponent]
     })
     .compileComponents();
-
-    fixture = TestBed.createComponent(TableMusicComponent);
+    
+    fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,17 +7,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableMusicComponent } from './table-music/table-music.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductMusicComponent } from './product-music/product-music.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     TableMusicComponent,
-    ProductMusicComponent
+    ProductMusicComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

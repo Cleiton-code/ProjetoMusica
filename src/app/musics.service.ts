@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { music } from './musics';
+import { Music } from './musics';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +12,19 @@ export class MusicsService {
 
   constructor(private http: HttpClient) { }
 
-  getMusics(): Observable<music[]> {
-    return this.http.get<music[]>('http://localhost:3000/musics');
+  getMusics(): Observable<Music[]> {
+    return this.http.get<Music[]>('http://localhost:3000/musics');
   }
-  getMusicsById(id:number): Observable<music>{
-    return this.http.get<music>('http://localhost:3000/musics/' + id);
+  getMusicsById(id:number): Observable<Music>{
+    return this.http.get<Music>('http://localhost:3000/musics/' + id);
   }
 
-  delete(music: music): Observable<void>{
+  delete(music: Music): Observable<void>{
     return this.http.delete<void>('http://localhost:3000/musics/' + music.id);
+  }
+
+  update(music: Music): Observable<Music>{
+    return this.http.put<Music>('http://localhost:3000/musics/' + music.id, music);
   }
 
 }
