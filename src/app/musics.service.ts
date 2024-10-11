@@ -1,30 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Music } from './musics';
+import { Musics } from './Musics';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MusicsService {
-  [x: string]: any;
-  private apiUrl = 'http://localhost:3000/musics';
+ url = 'http://localhost:3000/musics'
 
   constructor(private http: HttpClient) { }
-
-  getMusics(): Observable<Music[]> {
-    return this.http.get<Music[]>('http://localhost:3000/musics');
+  getMusic(): Observable<Musics[]> {
+    return this.http.get<Musics[]>('http://localhost:3000/musics');
   }
-  getMusicsById(id:number): Observable<Music>{
-    return this.http.get<Music>('http://localhost:3000/musics/' + id);
-  }
-
-  delete(music: Music): Observable<void>{
-    return this.http.delete<void>('http://localhost:3000/musics/' + music.id);
+  getMusicsById(id:number): Observable<Musics>{
+    return this.http.get<Musics>(`${this.url}/${id}`);
   }
 
-  update(music: Music): Observable<Music>{
-    return this.http.put<Music>('http://localhost:3000/musics/' + music.id, music);
+  delete(music: Musics): Observable<void>{
+    return this.http.delete<void>(`${this.url}/${music.id}` + music.id);
+  }
+
+  update(music: Musics): Observable<Musics>{
+    return this.http.put<Musics>(`${this.url}/${music.id}`, music);
   }
 
 }

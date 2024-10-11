@@ -18,12 +18,12 @@ export class ProductMusicComponent implements OnInit{
               private service: MusicsService,
               private formbuilder: FormBuilder ){
                 this.formGroupMusics = formbuilder.group({
-                  id: [''],
-                  name: [''],
-                  price: [''],
-                  category: [''],
-                  artist: [''],
-                  year: ['']
+                  id       : [''],
+                  name     : [''],
+                  price    : [''],
+                  category : [''],
+                  artist   : [''],
+                  year     : ['']
 
                 });
 
