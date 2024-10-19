@@ -5,7 +5,7 @@ import { ProductMusicComponent } from './product-music/product-music.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/musics', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'musics', component: TableMusicComponent },
   {path: 'music/:id', component: ProductMusicComponent},
   {path: 'music', component: ProductMusicComponent},

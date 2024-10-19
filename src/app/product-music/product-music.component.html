@@ -1,30 +1,46 @@
 <div class="container">
   <form [formGroup]="formGroupMusics">
     <div class="mb-3">
-      <label for="name" class="form-label" >name</label>
+      <label for="name" class="form-label" >Titulo</label>
       <input formControlName = "name"
       type="text"
       class="form-control"
       id="name"
-      placeholder="Digite seu nome">
+      placeholder="Digite o nome da musica">
     </div>
     <div class="mb-3">
-      <label for="price" class="form-label" >price</label>
+      <label for="price" class="form-label" >Preço</label>
       <input formControlName = "price"
       type="text"
       class="form-control"
       id="price"
       placeholder="Digite o Preço">
     </div>
-    <div class="mb-3 form-check">
-      <label for="category" class="form-label" >category</label>
+    <div class="mb-3">
+      <label for="category" class="form-label" >Artista</label>
+      <input formControlName = "artist"
+      type="text"
+      class="form-control"
+      id="category"
+      placeholder="Digite o nome do artista">
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label" >Genero</label>
       <input formControlName = "category"
       type="text"
       class="form-control"
       id="category"
       placeholder="Digite a categoria">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="update()">Salvar</button>
+    <div class="mb-3">
+      <label for="category" class="form-label" >Ano</label>
+      <input formControlName = "year"
+      type="text"
+      class="form-control"
+      id="category"
+      placeholder="Digite o Ano">
+    </div>
+
     <button type="submit" class="btn btn-primary" (click)="update()">Salvar</button>
   </form>
 </div>

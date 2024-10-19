@@ -18,7 +18,7 @@ export class MusicsService {
   }
 
   delete(music: Musics): Observable<void>{
-    return this.http.delete<void>(`${this.url}/${music.id}` + music.id);
+    return this.http.delete<void>('http://localhost:3000/musics/' +  music.id);
   }
 
   update(music: Musics): Observable<Musics>{
