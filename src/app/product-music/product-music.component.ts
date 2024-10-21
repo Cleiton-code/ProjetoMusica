@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
@@ -13,6 +14,7 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 export class ProductMusicComponent implements OnInit{
 
   formGroupMusics: FormGroup;
+  isEditing: boolean = false;
   constructor(private router: Router,
               private ActiveRoute: ActivatedRoute,
               private service: MusicsService,
@@ -30,6 +32,9 @@ export class ProductMusicComponent implements OnInit{
               }
   ngOnInit(){
     const id = Number(this.ActiveRoute.snapshot.paramMap.get("id"));
+    if(id != 0){
+      this.isEditing=true;
+    }
     this.loadMusics(id);
   }
 
@@ -43,6 +48,20 @@ export class ProductMusicComponent implements OnInit{
     this.service.update(this.formGroupMusics.value).subscribe({
       next: () => this.router.navigate(['musics'])
     });
+  }
+
+  save(){
+    const name = this.formGroupMusics.get('name')?.value;
+    if(!name || name.trim() === ""){
+      alert("Preenhcer o nome!!!")
+    }
+
+    else{
+    this.service.save(this.formGroupMusics.value).subscribe({
+      next: () => this.router.navigate(['musics'])
+
+    })
+  }
   }
 
 

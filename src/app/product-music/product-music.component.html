@@ -41,6 +41,8 @@
       placeholder="Digite o Ano">
     </div>
 
-    <button type="submit" class="btn btn-primary" (click)="update()">Salvar</button>
+    <button *ngIf="isEditing" type="button" class="btn btn-primary" (click)="update()">Salvar</button>
+
+    <button *ngIf="!isEditing" type="button" class="btn btn-primary" (click)="save()">Criar</button>
   </form>
 </div>

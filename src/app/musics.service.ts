@@ -7,22 +7,27 @@ import { Musics } from './Musics';
   providedIn: 'root'
 })
 export class MusicsService {
- url = 'http://localhost:3000/musics'
+ url = 'http://localhost:3000/musics';
 
   constructor(private http: HttpClient) { }
+
   getMusic(): Observable<Musics[]> {
-    return this.http.get<Musics[]>('http://localhost:3000/musics');
+    return this.http.get<Musics[]>(this.url);
   }
   getMusicsById(id:number): Observable<Musics>{
     return this.http.get<Musics>(`${this.url}/${id}`);
   }
 
   delete(music: Musics): Observable<void>{
-    return this.http.delete<void>('http://localhost:3000/musics/' +  music.id);
+    return this.http.delete<void>(`${this.url}/${music.id}`);
   }
 
   update(music: Musics): Observable<Musics>{
     return this.http.put<Musics>(`${this.url}/${music.id}`, music);
+  }
+
+  save(music: Musics): Observable<Musics>{
+    return this.http.post<Musics>(this.url, music)
   }
 
 }

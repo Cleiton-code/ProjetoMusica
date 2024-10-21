@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Chico Mineiro",
-      "price": 7.99,
+      "price": "7.88",
       "category": "Sertanejo",
       "artist": "Tonico & Tinocao",
       "year": 1968
@@ -127,8 +127,14 @@
       "category": "Sertanejo",
       "artist": "Tião Carreiro & Pardinho",
       "year": 1984
+    },
+    {
+      "id": 17,
+      "name": "Gato de três cores",
+      "price": "7,55",
+      "category": "Sertanejo Raíz",
+      "artist": "Tião Carreiro & Pardinho",
+      "year": "1980"
     }
-
   ]
-
 }

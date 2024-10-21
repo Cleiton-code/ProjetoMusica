@@ -20,18 +20,16 @@ export class TableMusicComponent implements OnInit {
     this.loadMusic();
   }
 
-  delete (music: Musics) {
-    this.service.delete(music).subscribe({
-      next: () => this.loadMusic()
-    });
-  }
-
-
-
 loadMusic() {
   this.service.getMusic().subscribe({
     next: data => this.musics = data
   });
+}
+
+delete (music: Musics) {
+  this.service.delete(music).subscribe({
+    next: () => this.loadMusic()
+  })
 }
 
 create() {
